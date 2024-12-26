@@ -1,0 +1,206 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlash</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --header-bg: #007bff;
+            --nav-bg: #0056b3;
+            --card-bg: white;
+            --footer-bg: #007bff;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --header-bg: #1f1f1f;
+            --nav-bg: #333;
+            --card-bg: #1e1e1e;
+            --footer-bg: #1f1f1f;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--nav-bg);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #003f7f;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 15px;
+            background-color: var(--header-bg);
+            color: white;
+        }
+
+        .card p {
+            padding: 15px;
+            margin: 0;
+        }
+
+        .video-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 315px;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .theme-toggle {
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StockFlash</h1>
+        <p>Unlock the secrets of the stock market with us!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+    </div>
+
+    <div class="content">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to StockFlash! We are passionate about empowering individuals with knowledge of the stock market to make informed investment decisions. Join us as we explore trends, strategies, and opportunities.</p>
+        </section>
+
+        <section id="videos">
+            <h2>Featured Videos</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Z4yVRwaG3h4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/aXxxaJlTO1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <div class="features">
+                <div class="card">
+                    <img src="file:///C:/Users/HP/Downloads/shashank.jpg" alt="Shashank">
+                    <h3>Stock Market Expert</h3>
+                    <p>Meet Shashank, your guide to mastering the stock market.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Investment Strategies">
+                    <h3>Investment Strategies</h3>
+                    <p>Explore effective strategies to maximize your investments.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" alt="Financial Planning">
+                    <h3>Financial Planning</h3>
+                    <p>Plan your finances for long-term success.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:vv054317@gmail.com">vv054317@gmail.com</a></p>
+            <p>Phone: <a href="tel:+9634794514">9634794514</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 StockFlash. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.toggleAttribute('data-theme', 'dark');
+        }
+    </script>
+</body>
+</html>
+
